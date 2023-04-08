@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hocinewaliddockerphphelloworld 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hocinewaliddockerphphelloworld
+  template:
+    metadata:
+      labels:
+        app: hocinewaliddockerphphelloworld 
+    spec:
+      containers:
+        - name: hocinewaliddockerphphelloworld 
+          image: acrkenzo.azurecr.io/hocinewaliddockerphphelloworld
+          ports:
+          - containerPort: 80
